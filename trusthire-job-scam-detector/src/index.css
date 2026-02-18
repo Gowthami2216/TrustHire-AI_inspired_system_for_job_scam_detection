@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* TrustHire Design System - Trust-focused color palette
+   Blues (trust), Greens (safe), Reds (warning), clean whites
+   All colors in HSL format
+*/
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 215 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    /* Primary: Professional trust blue */
+    --primary: 217 91% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Light blue-gray */
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 215 25% 25%;
+
+    --muted: 210 20% 94%;
+    --muted-foreground: 215 15% 50%;
+
+    --accent: 210 30% 92%;
+    --accent-foreground: 215 25% 20%;
+
+    /* Destructive: Warning red for scam detection */
+    --destructive: 0 84% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Success: Safe green for genuine jobs */
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+
+    /* Caution: Warning yellow/amber */
+    --caution: 38 92% 50%;
+    --caution-foreground: 0 0% 100%;
+
+    --border: 214 20% 88%;
+    --input: 214 20% 88%;
+    --ring: 217 91% 50%;
+
+    --radius: 0.75rem;
+
+    /* Trust Score Colors */
+    --score-safe: 142 71% 45%;
+    --score-caution: 38 92% 50%;
+    --score-danger: 0 84% 55%;
+
+    /* Gradients for hero sections */
+    --gradient-trust: linear-gradient(135deg, hsl(217, 91%, 50%) 0%, hsl(199, 89%, 48%) 100%);
+    --gradient-safe: linear-gradient(135deg, hsl(142, 71%, 45%) 0%, hsl(152, 76%, 40%) 100%);
+    --gradient-danger: linear-gradient(135deg, hsl(0, 84%, 55%) 0%, hsl(15, 90%, 50%) 100%);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 217 91% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 30% 92%;
+    --sidebar-accent-foreground: 215 25% 20%;
+    --sidebar-border: 214 20% 88%;
+    --sidebar-ring: 217 91% 50%;
+  }
+
+  .dark {
+    --background: 215 25% 8%;
+    --foreground: 210 20% 98%;
+
+    --card: 215 25% 12%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 215 25% 12%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 217 91% 60%;
+    --primary-foreground: 215 25% 10%;
+
+    --secondary: 215 25% 18%;
+    --secondary-foreground: 210 20% 95%;
+
+    --muted: 215 25% 18%;
+    --muted-foreground: 215 15% 60%;
+
+    --accent: 215 25% 20%;
+    --accent-foreground: 210 20% 98%;
+
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 65% 40%;
+    --success-foreground: 0 0% 100%;
+
+    --caution: 38 85% 45%;
+    --caution-foreground: 0 0% 100%;
+
+    --border: 215 25% 20%;
+    --input: 215 25% 20%;
+    --ring: 217 91% 60%;
+
+    --score-safe: 142 65% 40%;
+    --score-caution: 38 85% 45%;
+    --score-danger: 0 72% 50%;
+
+    --sidebar-background: 215 25% 10%;
+    --sidebar-foreground: 210 20% 95%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 25% 18%;
+    --sidebar-accent-foreground: 210 20% 98%;
+    --sidebar-border: 215 25% 20%;
+    --sidebar-ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
+
+/* Custom animations for TrustHire */
+@layer utilities {
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  .animate-score-fill {
+    animation: scoreFill 1.5s ease-out forwards;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes scoreFill {
+    from {
+      stroke-dashoffset: 283;
+    }
+  }
+}
