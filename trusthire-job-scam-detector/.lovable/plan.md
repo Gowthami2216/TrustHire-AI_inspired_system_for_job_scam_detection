@@ -10,7 +10,6 @@ A professional, trust-focused web application for detecting fake job offers (fro
 
 **TrustHire** helps users verify job offers by analyzing uploaded documents and providing a trust score with detailed explanations. This is a frontend-only demo with simulated AI analysis.
 
----
 
 ## 📄 Pages & Features
 
